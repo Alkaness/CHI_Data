@@ -1,0 +1,19 @@
+version: "3.9"
+
+services:
+  db-init:
+    image: alpine:3.20
+    container_name: weather_db_init
+    working_dir: /app
+    volumes:
+      - ./data:/app/data
+      - ./schema.sql:/resources/sql/schema.sql:ro
+    entrypoint: >
+      sh -c "
+        set -e;
+        apk add --no-cache sqlite;
+        mkdir -p /app/data;
+        sqlite3 /app/data/weather.db < /resources/sql/schema.sql;
+        echo 'Schema applied to /app/data/weather.db';
+      "
+    # Run this manually when you need to (see commands below)
