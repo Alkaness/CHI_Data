@@ -1,0 +1,31 @@
+exclude: 'docs|node_modules|migrations|.git|.tox'
+default_stages: [ commit ]
+fail_fast: true
+
+repos:
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v6.0.0
+    hooks:
+      - id: trailing-whitespace
+      - id: end-of-file-fixer
+      - id: check-yaml
+
+  - repo: https://github.com/psf/black
+    rev: 25.1.0  # Match this version with your project's black version
+    hooks:
+      - id: black
+        # No need for args here as it will read from pyproject.toml
+        # Remove additional_dependencies unless specifically needed
+
+  - repo: https://github.com/pycqa/isort
+    rev: 6.0.1  # Match this version with your project's isort version
+    hooks:
+      - id: isort
+        # No need for args here as it will read from pyproject.toml
+        name: isort (python)
+
+  - repo: https://github.com/hadialqattan/pycln
+    rev: v2.5.0 # Possible releases: https://github.com/hadialqattan/pycln/releases
+    hooks:
+      - id: pycln
+        additional_dependencies: ['click==8.0.4']
