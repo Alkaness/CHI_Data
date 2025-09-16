@@ -1,0 +1,148 @@
+{
+  "latitude": 50.439365,
+  "longitude": 30.476192,
+  "generationtime_ms": 1.798868179321289,
+  "utc_offset_seconds": 10800,
+  "timezone": "Europe/Kiev",
+  "timezone_abbreviation": "GMT+3",
+  "elevation": 169.0,
+  "daily_units": {
+    "time": "iso8601",
+    "temperature_2m_max": "°C",
+    "temperature_2m_min": "°C",
+    "apparent_temperature_max": "°C",
+    "apparent_temperature_min": "°C",
+    "precipitation_sum": "mm",
+    "rain_sum": "mm",
+    "showers_sum": "mm",
+    "snowfall_sum": "cm",
+    "precipitation_hours": "h",
+    "sunrise": "iso8601",
+    "sunset": "iso8601",
+    "daylight_duration": "s",
+    "sunshine_duration": "s",
+    "shortwave_radiation_sum": "MJ/m²",
+    "windspeed_10m_max": "km/h",
+    "windgusts_10m_max": "km/h",
+    "winddirection_10m_dominant": "°",
+    "weathercode": "wmo code",
+    "et0_fao_evapotranspiration": "mm",
+    "uv_index_max": "undefined",
+    "uv_index_clear_sky_max": "undefined"
+  },
+  "daily": {
+    "time": [
+      "2025-08-11"
+    ],
+    "temperature_2m_max": [
+      22.2
+    ],
+    "temperature_2m_min": [
+      16.0
+    ],
+    "apparent_temperature_max": [
+      19.6
+    ],
+    "apparent_temperature_min": [
+      14.8
+    ],
+    "precipitation_sum": [
+      4.5
+    ],
+    "rain_sum": [
+      4.5
+    ],
+    "showers_sum": [
+      0.0
+    ],
+    "snowfall_sum": [
+      0.0
+    ],
+    "precipitation_hours": [
+      2.0
+    ],
+    "sunrise": [
+      "2025-08-11T05:41"
+    ],
+    "sunset": [
+      "2025-08-11T20:25"
+    ],
+    "daylight_duration": [
+      53060.71
+    ],
+    "sunshine_duration": [
+      46258.35
+    ],
+    "shortwave_radiation_sum": [
+      20.52
+    ],
+    "windspeed_10m_max": [
+      20.1
+    ],
+    "windgusts_10m_max": [
+      49.7
+    ],
+    "winddirection_10m_dominant": [
+      306
+    ],
+    "weathercode": [
+      63
+    ],
+    "et0_fao_evapotranspiration": [
+      4.19
+    ],
+    "uv_index_max": [
+      null
+    ],
+    "uv_index_clear_sky_max": [
+      null
+    ]
+  },
+  "_requested_daily": [
+    "temperature_2m_max",
+    "temperature_2m_min",
+    "apparent_temperature_max",
+    "apparent_temperature_min",
+    "precipitation_sum",
+    "rain_sum",
+    "showers_sum",
+    "snowfall_sum",
+    "precipitation_hours",
+    "sunrise",
+    "sunset",
+    "daylight_duration",
+    "sunshine_duration",
+    "shortwave_radiation_sum",
+    "windspeed_10m_max",
+    "windgusts_10m_max",
+    "winddirection_10m_dominant",
+    "weathercode",
+    "et0_fao_evapotranspiration",
+    "uv_index_max",
+    "uv_index_clear_sky_max"
+  ],
+  "_accepted_daily": [
+    "temperature_2m_max",
+    "temperature_2m_min",
+    "apparent_temperature_max",
+    "apparent_temperature_min",
+    "precipitation_sum",
+    "rain_sum",
+    "showers_sum",
+    "snowfall_sum",
+    "precipitation_hours",
+    "sunrise",
+    "sunset",
+    "daylight_duration",
+    "sunshine_duration",
+    "shortwave_radiation_sum",
+    "windspeed_10m_max",
+    "windgusts_10m_max",
+    "winddirection_10m_dominant",
+    "weathercode",
+    "et0_fao_evapotranspiration",
+    "uv_index_max",
+    "uv_index_clear_sky_max"
+  ],
+  "_dropped_daily": []
+}

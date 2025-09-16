@@ -1,0 +1,41 @@
+INSERT INTO weather_daily (
+  date, temp_max_c, temp_min_c, temp_max_f, temp_min_f,
+  app_temp_max_c, app_temp_min_c,
+  precip_mm, rain_mm, showers_mm, snowfall_mm, precip_hours,
+  sunrise, sunset, daylight_sec, sunshine_sec, shortwave_radiation_mj_m2,
+  wind_max_kmh, wind_gust_max_kmh, wind_dir_deg, weather_code, et0_mm,
+  uv_index_max, uv_index_clear_sky_max, source, ingested_at
+) VALUES (
+  :date, :temp_max_c, :temp_min_c, :temp_max_f, :temp_min_f,
+  :app_temp_max_c, :app_temp_min_c,
+  :precip_mm, :rain_mm, :showers_mm, :snowfall_mm, :precip_hours,
+  :sunrise, :sunset, :daylight_sec, :sunshine_sec, :shortwave_radiation_mj_m2,
+  :wind_max_kmh, :wind_gust_max_kmh, :wind_dir_deg, :weather_code, :et0_mm,
+  :uv_index_max, :uv_index_clear_sky_max, :source, :ingested_at
+)
+ON CONFLICT(date) DO UPDATE SET
+  temp_max_c=excluded.temp_max_c,
+  temp_min_c=excluded.temp_min_c,
+  temp_max_f=excluded.temp_max_f,
+  temp_min_f=excluded.temp_min_f,
+  app_temp_max_c=excluded.app_temp_max_c,
+  app_temp_min_c=excluded.app_temp_min_c,
+  precip_mm=excluded.precip_mm,
+  rain_mm=excluded.rain_mm,
+  showers_mm=excluded.showers_mm,
+  snowfall_mm=excluded.snowfall_mm,
+  precip_hours=excluded.precip_hours,
+  sunrise=excluded.sunrise,
+  sunset=excluded.sunset,
+  daylight_sec=excluded.daylight_sec,
+  sunshine_sec=excluded.sunshine_sec,
+  shortwave_radiation_mj_m2=excluded.shortwave_radiation_mj_m2,
+  wind_max_kmh=excluded.wind_max_kmh,
+  wind_gust_max_kmh=excluded.wind_gust_max_kmh,
+  wind_dir_deg=excluded.wind_dir_deg,
+  weather_code=excluded.weather_code,
+  et0_mm=excluded.et0_mm,
+  uv_index_max=excluded.uv_index_max,
+  uv_index_clear_sky_max=excluded.uv_index_clear_sky_max,
+  source=excluded.source,
+  ingested_at=excluded.ingested_at;

@@ -1,4 +1,4 @@
--- schema.sql
+-- schema for SQLite database
 PRAGMA foreign_keys = ON;
 
 CREATE TABLE IF NOT EXISTS weather_daily (

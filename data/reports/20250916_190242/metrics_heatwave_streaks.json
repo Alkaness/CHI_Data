@@ -1,0 +1,10 @@
+[
+  {
+    "grp_id": 1,
+    "start_date": "2025-08-30",
+    "end_date": "2025-09-01",
+    "days": 3,
+    "avg_temp_max_c": 30.666666666666668,
+    "peak_temp_max_c": 31.4
+  }
+]

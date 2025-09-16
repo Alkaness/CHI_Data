@@ -1,19 +1,23 @@
-version: "3.9"
-
 services:
-  db-init:
-    image: alpine:3.20
-    container_name: weather_db_init
-    working_dir: /app
+  postgres:
+    image: postgres:16
+    container_name: weather_postgres
+    environment:
+      POSTGRES_DB: ${POSTGRES_DB:-weather}
+      POSTGRES_USER: ${POSTGRES_USER:-weather}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-weather}
+      TZ: ${POSTGRES_TZ:-UTC}
+    ports:
+      - "${POSTGRES_PORT:-5432}:5432"
     volumes:
-      - ./data:/app/data
-      - ./schema.sql:/resources/sql/schema.sql:ro
-    entrypoint: >
-      sh -c "
-        set -e;
-        apk add --no-cache sqlite;
-        mkdir -p /app/data;
-        sqlite3 /app/data/weather.db < /resources/sql/schema.sql;
-        echo 'Schema applied to /app/data/weather.db';
-      "
-    # Run this manually when you need to (see commands below)
+      - postgres-data:/var/lib/postgresql/data
+      - ./resources/sql/pg/init.sql:/docker-entrypoint-initdb.d/00-init.sql:ro
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${POSTGRES_USER:-weather} -d ${POSTGRES_DB:-weather}"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    restart: unless-stopped
+
+volumes:
+  postgres-data:
