@@ -27,7 +27,7 @@
     "winddirection_10m_dominant": "°",
     "weathercode": "wmo code",
     "et0_fao_evapotranspiration": "mm",
-    "uv_index_max": "undefined",S
+    "uv_index_max": "undefined",
     "uv_index_clear_sky_max": "undefined"
   },
   "daily": {
@@ -50,7 +50,7 @@
       0.2
     ],
     "rain_sum": [
-      0.2
+      S0.2
     ],
     "showers_sum": [
       0.0

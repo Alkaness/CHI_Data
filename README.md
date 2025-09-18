@@ -57,7 +57,7 @@ All data is saved locally; the project does not upload or share these datasets e
 ## Project Layout
 
 ```
-CHI_Data_2/
+CHI_Data/
 ├─ README.md
 ├─ Makefile
 ├─ pyproject.toml
@@ -252,7 +252,7 @@ Environment variables can be placed in `.env`. The Makefile automatically source
 1. **Clone the repository**:
    ```bash
    git clone <repo-url>
-   cd CHI_Data_2
+   cd CHI_Data
    ```
 
 2. **Install dependencies** (using Poetry for illustration):
@@ -278,7 +278,7 @@ This command:
 - Reads environment variables and builds a `PipelineConfig`.  
 - Fetches historical weather data from Open-Meteo in batches.  
 - Saves raw JSON (`data/raw/DDDD-.../response.json`). 
-![img_6.png](resources/img/4.png)
+![6.png](resources/img/6.png)
 - Writes cleaned parquet (`data/processed/.../data.parquet`).
 ![img_5.png](resources/img/3.png)
 - UPSERTs into `db/sqlite/weather.db`.  
